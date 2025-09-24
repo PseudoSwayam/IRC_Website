@@ -137,4 +137,15 @@ Let’s build a sleek, responsive, and feature-rich website for the Iter Robotic
 
 ## Contributors:
 	•	Project Manager: Swayam Prakash Sahoo
-	
+	•	Rashmi Ranjan Rout
+	•	Lalatendu Bal
+	•	Nishigandha Mallik
+	•	Devpriyo Ghosh
+	•	Ritesh Sahoo
+	•	Soumya
+	•	Amrita Sahu
+	•	Shruti Shriya
+	•	Aavash
+	•	Ansuman Swain
+	•	Aman Khera
+	•	Aritro Adhikari
