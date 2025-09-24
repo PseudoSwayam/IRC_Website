@@ -16,7 +16,7 @@ This document highlights the rules and best practices for contributing to this c
 | Soumya Prakash Nayak| Frontend |
 | Amrita Sahu | Frontend + Content Writer |
 | Shruti Shriya | Frontend + DB + SEO |
-| Aavash | Content Writer |
+| Aavash Kumar Beriha | Content Writer |
 | Ansuman Swain | UI/UX |
 | Aman Khera | UI/UX + 3d Models |
 | Aritro Adhikari | Content Writer |

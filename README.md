@@ -145,7 +145,7 @@ Let’s build a sleek, responsive, and feature-rich website for the Iter Robotic
 	•	Soumya Prakash Nayak : Frontend 
 	•	Amrita Sahu : Frontend + Content Writer
 	•	Shruti Shriya : Frontend + DB + SEO
-	•	Aavash : Content Writer
+	•	Aavash Kumar Beriha : Content Writer
 	•	Ansuman Swain : UIUX Designing
 	•	Amar Khera : UIUX Designing
 	•	Aritro Adhikari : Content Writing
