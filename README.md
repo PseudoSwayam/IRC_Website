@@ -1,13 +1,11 @@
-Perfect! I’ve converted the entire README into one full Markdown code block, with placeholders for the IRC logo and a website link for team details and tasks. You can copy-paste this directly into your README.md.
-
-# Iter Robotics Club Official Website (IRC_Website)
+# Iter Robotics Club Official Website
 
 ![IRC Logo](https://res.cloudinary.com/dwwihknne/image/upload/v1758474178/unnamed_i4g46z.jpg)  
 
-Welcome to the **Iter Robotics Club Official Website** repository!  
-This project is being developed using the **MERN stack** (MongoDB, Express.js, React.js, Node.js). This README is designed to help team members get started quickly, follow a proper workflow, and contribute effectively.
+## Welcome to the **Iter Robotics Club Official Website** repository!  
+### This project is being developed using the **MERN stack** (MongoDB, Express.js, React.js, Node.js). This README is designed to help team members get started quickly, follow a proper workflow, and contribute effectively.
 
-For full project details, team members, and task assignments, visit: [IRC Project Dashboard](https://irc-overview.netlify.app/)  
+## For full project details, team members, and task assignments, visit: [IRC Project Dashboard](https://irc-overview.netlify.app/)  
 
 ---
 
@@ -54,34 +52,39 @@ git clone https://github.com/PseudoSwayam/IRC_Website.git
 cd IRC_Website/
 ```
 
-⸻
+---
 
 ### Git Workflow
 
 We follow a feature-branch workflow branching from dev (never commit directly to main):
-** 1.	Switch to dev branch and pull latest updates
+
+**1. Switch to dev branch and pull latest updates**
 ```bash
 git checkout dev
 git pull origin dev
 ```
-** 2.	Create a new feature branch
+
+**2. Create a new feature branch**
 ```bash
 git checkout -b feature/<short-description>
 ```
 Replace <short-description> with a concise name describing your feature/task.
-** 3.	Make changes to code, frontend, or backend as required.
-** 4.	Stage and commit changes
+
+**3. Make changes to code, frontend, or backend as required.**
+
+**4. Stage and commit changes**
 ```bash
 git add .
 git commit -m "feat: <short description of change/addition>"
 ```
 Use conventional commit messages for clarity (e.g., feat: add navbar component, fix: resolve login bug).
-** 5.	Push your branch to GitHub
+
+** 5.	Push your branch to GitHub**
 ```bash
 git push -u origin feature/<short-description>
 ```
 
-⸻
+---
 
 ## Pull Request (PR) Guidelines
 
@@ -97,7 +100,7 @@ git push -u origin feature/<short-description>
 
 Ensure your code is reviewed and approved before merging to dev.
 
-⸻
+---
 
 ## Code Style & Conventions
 	•	Use camelCase for variables and functions.
@@ -107,26 +110,27 @@ Ensure your code is reviewed and approved before merging to dev.
 	•	Comment complex code for clarity.
 	•	Run linting and format checks before committing.
 
-⸻
+---
 
 ## Contact / Team Communication
 	•	All development discussions, clarifications, and reviews should be communicated in the team WhatsApp group.
 	•	Tag the Project Manager / Lead for approvals or issues.
 
-⸻
+---
 
 ### Quick Links
-	•	IRC Logo Placeholder: ```https://res.cloudinary.com/dwwihknne/image/upload/v1758474178/unnamed_i4g46z.jpg```
+•	IRC Logo Placeholder: [https://res.cloudinary.com/dwwihknne/image/upload/v1758474178/unnamed_i4g46z.jpg](https://res.cloudinary.com/dwwihknne/image/upload/v1758474178/unnamed_i4g46z.jpg)
 
-	•	Project & Team Dashboard: ```https://irc-overview.netlify.app/```
+•	Project & Team Dashboard: [https://irc-overview.netlify.app/](https://irc-overview.netlify.app/)
 
-⸻
+---
 
 ### Happy Coding! 🚀
 
 Let’s build a sleek, responsive, and feature-rich website for the Iter Robotics Club!
 
-⸻
+---
 
 ## Contributors:
-	•	Project Manager: Swayam Sahoo
+	•	Project Manager: Swayam Prakash Sahoo
+	
