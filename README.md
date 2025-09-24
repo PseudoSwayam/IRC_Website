@@ -119,9 +119,11 @@ Ensure your code is reviewed and approved before merging to dev.
 ---
 
 ### Quick Links
-•	IRC Logo Placeholder: [https://res.cloudinary.com/dwwihknne/image/upload/v1758474178/unnamed_i4g46z.jpg](https://res.cloudinary.com/dwwihknne/image/upload/v1758474178/unnamed_i4g46z.jpg)
+•	IRC Logo Placeholder: 
+[https://res.cloudinary.com/dwwihknne/image/upload/v1758474178/unnamed_i4g46z.jpg](https://res.cloudinary.com/dwwihknne/image/upload/v1758474178/unnamed_i4g46z.jpg)
 
-•	Project & Team Dashboard: [https://irc-overview.netlify.app/](https://irc-overview.netlify.app/)
+•	Project & Team Dashboard: 
+[https://irc-overview.netlify.app/](https://irc-overview.netlify.app/)
 
 ---
 
