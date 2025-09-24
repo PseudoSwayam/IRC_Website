@@ -7,19 +7,19 @@ This document highlights the rules and best practices for contributing to this c
 
 | Contributor | Role |
 |-----|-----|
-| Swayam Prakash Sahoo | |
-| Rashmi Ranjan Rout | |
-| Lalatendu Bal | |
+| Swayam Prakash Sahoo | AIML + Frontend + DB |
+| Rashmi Ranjan Rout | Frontend |
+| Lalatendu Bal | Frontend + Backend|
 | Nishigandha Mallik | |
 | Devpriyo Ghosh | |
-| Ritesh Sahoo | |
-| Soumya | |
-| Amrita Sahu | |
-| Shruti Shriya | |
-| Aavash | |
-| Ansuman Swain | |
-| Aman Khera | |
-| Aritro Adhikari | |
+| Ritesh Sahoo | Frontend + Backend |
+| Soumya Prakash Nayak| Frontend |
+| Amrita Sahu | Frontend + Content Writer |
+| Shruti Shriya | Frontend + DB + SEO |
+| Aavash | Content Writer |
+| Ansuman Swain | UI/UX |
+| Aman Khera | UI/UX + 3d Models |
+| Aritro Adhikari | Content Writer |
 
 ---
 
