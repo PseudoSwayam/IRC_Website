@@ -3,6 +3,10 @@
 ![IRC Logo](https://res.cloudinary.com/dwwihknne/image/upload/v1758474178/unnamed_i4g46z.jpg)  
 
 ## Welcome to the **Iter Robotics Club Official Website** repository!  
+![Project Banner](https://img.shields.io/badge/IRC-Website-blue.svg)
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-green.svg)](./LICENSE)
+![Status](https://img.shields.io/badge/Status-Building-orange.svg)
+
 ### This project is being developed using the **MERN stack** (MongoDB, Express.js, React.js, Node.js). This README is designed to help team members get started quickly, follow a proper workflow, and contribute effectively.
 
 ## For full project details, team members, and task assignments, visit: [IRC Project Dashboard](https://irc-overview.netlify.app/)  
@@ -51,8 +55,6 @@ Our goal is to **maintain clean code, modular components, and collaborative deve
 git clone https://github.com/PseudoSwayam/IRC_Website.git
 cd IRC_Website/
 ```
-
----
 
 ### Git Workflow
 
