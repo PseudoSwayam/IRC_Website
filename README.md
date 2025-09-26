@@ -139,8 +139,8 @@ Let’s build a sleek, responsive, and feature-rich website for the Iter Robotic
 	•	Swayam Prakash Sahoo : Project Manager
 	•	Rashmi Ranjan Rout : Frontend 
 	•	Lalatendu Bal : Frontend + Backend(C++)
-	•	Nishigandha Mallik
-	•	Devpriyo Ghosh
+	•	Nishigandha Mallik : Frontend
+	•	Devpriyo Ghosh : Frontend + Backend
 	•	Ritesh Sahoo : Frontend + Backend
 	•	Soumya Prakash Nayak : Frontend 
 	•	Amrita Sahu : Frontend + Content Writer

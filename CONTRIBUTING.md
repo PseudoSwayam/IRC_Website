@@ -9,9 +9,9 @@ This document highlights the rules and best practices for contributing to this c
 |-----|-----|
 | Swayam Prakash Sahoo | AIML + Frontend + DB |
 | Rashmi Ranjan Rout | Frontend |
-| Lalatendu Bal | Frontend + Backend|
-| Nishigandha Mallik | |
-| Devpriyo Ghosh | |
+| Lalatendu Bal | Frontend + Backend |
+| Nishigandha Mallik | Frontend |
+| Devpriyo Ghosh | Frontend + Backend |
 | Ritesh Sahoo | Frontend + Backend |
 | Soumya Prakash Nayak| Frontend |
 | Amrita Sahu | Frontend + Content Writer |
