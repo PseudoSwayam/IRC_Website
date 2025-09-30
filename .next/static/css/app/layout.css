@@ -1,6 +1,6 @@
-/*!***************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./app/globals.css ***!
-  \***************************************************************************************************************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./app/globals.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700;800;900&display=swap');
 
 *, ::before, ::after{
@@ -1564,9 +1564,9 @@ a {
   }
 }
 
-/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./app/dark-background.css ***!
-  \***********************************************************************************************************************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./app/dark-background.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************/
 /* Dark gradient background similar to provided image */
 .dark-bg {
   background: radial-gradient(circle at center, 
@@ -1577,9 +1577,9 @@ a {
     rgba(5, 3, 8, 1) 100%);
   min-height: 100vh;
 }
-/*!**************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./home/styles/animations.css ***!
-  \**************************************************************************************************************************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./home/styles/animations.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************/
 /* Continuous scrolling animation for the tape strip */
 @keyframes scroll {
   0% {
@@ -1838,3 +1838,188 @@ a {
 }
 
 
+/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./components/ui/chatbot.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************/
+/*
+  CHATBOT STYLES
+  This file contains all styles for the chatbot component, using the
+  color palette from the provided UI design for a beautiful, integrated look.
+*/
+
+/* Floating Toggle Button */
+.chatbot-toggle-button {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 1000;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    /* Gradient from image: Blue to Cyan */
+    background: linear-gradient(45deg, #3F37FF, #28C5B4, #00FFF7);
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.3s ease;
+  }
+  
+  .chatbot-toggle-button:hover {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 12px 30px rgba(40, 197, 180, 0.5); /* Glowing effect */
+  }
+  
+  /* The SVG icon inside the button */
+  .chatbot-toggle-button svg {
+    width: 2rem;
+    height: 2rem;
+    color: white;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Chat Window Container */
+  .chatbot-container {
+    position: fixed;
+    bottom: 6.5rem;
+    right: 1.5rem;
+    z-index: 1000;
+    width: 22rem;
+    max-height: 70vh;
+    color: #FCF8EC; /* Off-white for readability */
+    border-radius: 1rem; /* Softer corners */
+    padding: 1.25rem;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Gradient from image: Dark Blue to Teal */
+    background: linear-gradient(135deg, #121417, #162032, #28C5B4);
+    animation: slideInUp 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+  
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Header with Title and Close Button */
+  .chatbot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(252, 248, 236, 0.1);
+  }
+  
+  .chatbot-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .chatbot-close-button {
+    background: none;
+    border: none;
+    color: #C2BABA;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+  }
+  
+  .chatbot-close-button:hover {
+    color: #FCF8EC;
+    transform: rotate(90deg);
+  }
+  
+  /* Messages Display Area */
+  .chatbot-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+    padding-right: 0.5rem;
+  }
+  
+  /* Custom Scrollbar */
+  .chatbot-messages::-webkit-scrollbar {
+    width: 6px;
+  }
+  .chatbot-messages::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .chatbot-messages::-webkit-scrollbar-thumb {
+    background-color: #28C5B4;
+    border-radius: 3px;
+  }
+  .chatbot-messages::-webkit-scrollbar-thumb:hover {
+    background-color: #00FFF7;
+  }
+  
+  /* Individual Message Bubbles */
+  .message {
+    margin-bottom: 0.75rem;
+    padding: 0.6rem 1rem;
+    border-radius: 0.75rem;
+    max-width: 85%;
+    line-height: 1.4;
+    animation: messageFadeIn 0.4s ease-in-out;
+  }
+  
+  @keyframes messageFadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .message.user {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ECA72C; /* Gold from image */
+    margin-left: auto;
+    border-bottom-right-radius: 0.2rem;
+  }
+  
+  .message.bot {
+    background: linear-gradient(to right, #1A2B4C, #3F37FF); /* Blue gradient from image */
+    color: #FCF8EC;
+    margin-right: auto;
+    border-bottom-left-radius: 0.2rem;
+  }
+  
+  /* Question Buttons */
+  .chatbot-buttons-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  
+  .chatbot-question-button {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #C2BABA;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    text-align: left;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .chatbot-question-button:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #FCF8EC;
+    border-color: #28C5B4;
+    transform: translateY(-2px);
+  }

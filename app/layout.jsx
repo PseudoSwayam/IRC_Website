@@ -1,4 +1,6 @@
 import './globals.css'
+import "../components/ui/chatbot.css";
+import Chatbot from "../components/ui/Chatbot";
 
 export const metadata = {
   title: 'ITER Robotics Club',
@@ -8,7 +10,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Chatbot />
+      </body>
     </html>
   )
 }
