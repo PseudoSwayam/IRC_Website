@@ -172,7 +172,7 @@ export function Footer9() {
           </div>
         </Card>
         <div className="text-small flex flex-col-reverse items-start justify-between pt-6 pb-4 md:flex-row md:items-center md:pt-8 md:pb-0">
-          <p className="mt-6 md:mt-0">© 2024 Relume. All rights reserved.</p>
+          <p className="mt-6 md:mt-0">© 2025 ITER Robotics Club. All rights reserved.</p>
           <ul className="text-small grid grid-flow-row grid-cols-[max-content] justify-center gap-y-4 md:grid-flow-col md:gap-x-6 md:gap-y-0">
             <li className="underline">
               <a href="#">Privacy policy</a>
