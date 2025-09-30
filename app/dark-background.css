@@ -1,0 +1,10 @@
+/* Dark gradient background similar to provided image */
+.dark-bg {
+  background: radial-gradient(circle at center, 
+    rgba(30, 17, 34, 1) 0%, 
+    rgba(20, 10, 25, 1) 25%, 
+    rgba(15, 8, 20, 1) 50%, 
+    rgba(10, 5, 15, 1) 75%, 
+    rgba(5, 3, 8, 1) 100%);
+  min-height: 100vh;
+}

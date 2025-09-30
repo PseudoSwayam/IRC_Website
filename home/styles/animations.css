@@ -1,0 +1,257 @@
+/* Continuous scrolling animation for the tape strip */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 15s linear infinite;
+  will-change: transform;
+}
+
+.animate-scroll-reverse {
+  animation: scroll-reverse 15s linear infinite;
+  will-change: transform;
+}
+
+@keyframes scroll-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Floating animation for logo */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Subtle yellow mesh gradient background - top only */
+.hero-mesh-bg {
+  background: 
+    radial-gradient(ellipse 800px 400px at 20% 20%, rgba(251, 191, 36, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse 600px 300px at 80% 25%, rgba(245, 158, 11, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 400px 600px at 60% 10%, rgba(217, 119, 6, 0.10) 0%, transparent 60%);
+}
+
+/* Scroll-based fade effect for belts - slow transition */
+.belt-scroll-fade {
+  transition: opacity 1.5s ease-out;
+}
+
+.belt-fade-partial {
+  opacity: 0.3;
+}
+
+.belt-fade-out {
+  opacity: 0;
+}
+
+/* Floating images with tilt */
+.floating-image {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  transition: transform 0.3s ease;
+  will-change: transform;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
+}
+
+.floating-image:hover {
+  transform: scale(1.05) !important;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.4));
+}
+
+/* Bigger size for RoboWars image */
+.floating-image-large {
+  width: 250px;
+}
+
+/* Left image positioning and tilt - closer to center */
+.floating-card-left {
+  top: 30%;
+  left: 15%;
+  transform: rotate(-8deg);
+  animation: float-left 4s ease-in-out infinite;
+}
+
+/* Right image positioning and tilt - closer to center */
+.floating-card-right {
+  top: 40%;
+  right: 15%;
+  transform: rotate(6deg);
+  animation: float-right 3.5s ease-in-out infinite;
+}
+
+@keyframes float-left {
+  0%, 100% {
+    transform: rotate(-8deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(-8deg) translateY(-12px);
+  }
+}
+
+@keyframes float-right {
+  0%, 100% {
+    transform: rotate(6deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(6deg) translateY(-15px);
+  }
+}
+
+/* RoboWars card above belts */
+.floating-above-belts {
+  z-index: 50;
+}
+
+/* Individual letter hover effects */
+.letter {
+  display: inline-block;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  cursor: pointer;
+  position: relative;
+}
+
+.letter:hover {
+  transform: scale(1.3) translateY(-15px) rotate(5deg);
+  text-shadow: 
+    0 0 20px rgba(251, 191, 36, 0.8),
+    0 0 40px rgba(245, 158, 11, 0.6),
+    2px 2px 8px rgba(0,0,0,0.9);
+  z-index: 100;
+  animation: tadaaa 0.6s ease-in-out;
+}
+
+@keyframes tadaaa {
+  0% {
+    transform: scale(1) translateY(0) rotate(0deg);
+  }
+  20% {
+    transform: scale(1.1) translateY(-5px) rotate(-2deg);
+  }
+  40% {
+    transform: scale(1.2) translateY(-10px) rotate(3deg);
+  }
+  60% {
+    transform: scale(1.25) translateY(-12px) rotate(-1deg);
+  }
+  80% {
+    transform: scale(1.28) translateY(-14px) rotate(2deg);
+  }
+  100% {
+    transform: scale(1.3) translateY(-15px) rotate(5deg);
+  }
+}
+
+/* Special effects for different words - aligned by E-O-U */
+.word-iter {
+  white-space: nowrap;
+  text-align: center;
+  width: 100%;
+  display: block;
+  transform: translateX(0.5em);
+}
+
+.word-robotics {
+  white-space: nowrap;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+.word-club {
+  white-space: nowrap;
+  text-align: center;
+  width: 100%;
+  display: block;
+  transform: translateX(0.5em);
+}
+
+.word-iter .letter:hover {
+  color: #fbbf24;
+}
+
+.word-robotics .letter:hover {
+  color: #f59e0b;
+}
+
+.word-club .letter:hover {
+  color: #d97706;
+}
+
+
+/* Additional tape strip effects */
+.tape-strip {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* Darker yellow tape strip for cross effect */
+.tape-strip-dark {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.tape-strip::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0px,
+    transparent 2px,
+    rgba(0, 0, 0, 0.05) 2px,
+    rgba(0, 0, 0, 0.05) 4px
+  );
+}
+
+.tape-strip-dark::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0px,
+    transparent 2px,
+    rgba(0, 0, 0, 0.05) 2px,
+    rgba(0, 0, 0, 0.05) 4px
+  );
+}
+
+/* Simple style for CLUB matching the heading */
+.club-text {
+  font-family: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  line-height: 1.2;
+  color: white;
+}
+
