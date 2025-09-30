@@ -1,0 +1,30 @@
+.team-card {
+    background-color: #1a1a2e;
+    border: 1px solid #2a2a4e;
+    border-radius: 12px;
+    padding: 2rem 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.team-card:hover {
+    transform: translateY(-5px);
+    background-color: #2a2a4e;
+}
+.team-avatar-placeholder {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #0b0b1a;
+    margin: 0 auto 1rem auto;
+    border: 1px solid #3a3a5e;
+}
+.team-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: block;
+}
+.team-handle {
+    font-size: 0.9rem;
+    color: #a0a0c0;
+}

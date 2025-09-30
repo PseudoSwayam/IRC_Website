@@ -1,0 +1,5 @@
+.teams-page-container {
+    padding: 0 8rem; /* Horizontal padding for the whole page */
+    max-width: 1600px;
+    margin: 0 auto;
+  }

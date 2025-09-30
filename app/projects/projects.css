@@ -1,0 +1,52 @@
+/*
+  We use a more specific selector to prevent this CSS
+  from accidentally affecting other pages.
+*/
+.dark-bg .projects-container {
+    padding: 4rem 8rem; /* Increased horizontal padding */
+    max-width: 1400px; /* Allow more space */
+    margin: 0 auto;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  
+  .projects-header {
+    text-align: center;
+  }
+  
+  .projects-header h1 {
+    font-size: 3.5rem; /* Larger font size */
+    font-weight: 700; /* Bold */
+    margin-bottom: 1.5rem;
+  }
+  
+  .projects-header p {
+    font-size: 1.1rem;
+    color: #a0a0c0; /* Lighter, purple-gray text color from design */
+    line-height: 1.6;
+  }
+  
+  .project-section {
+    margin-bottom: 5rem; /* More space between sections */
+  }
+  
+  .project-section h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    /* Removed the left border to match the design */
+  }
+  
+  .project-section p {
+    font-size: 1rem;
+    color: #a0a0c0; /* Match text color */
+    margin-bottom: 2.5rem; /* More space before the cards */
+    max-width: 800px;
+    line-height: 1.6;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Slightly wider cards */
+    gap: 2.5rem; /* More gap */
+  }

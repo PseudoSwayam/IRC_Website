@@ -1,0 +1,104 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+.modal-content {
+    background-color: #1a1a2e;
+    border: 1px solid #2a2a4e;
+    border-radius: 12px;
+    padding: 2.5rem;
+    width: 90%;
+    max-width: 1200px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #a0a0c0;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+.modal-main-content {
+    display: flex;
+    gap: 3rem;
+}
+.modal-left, .modal-right {
+    flex: 1;
+}
+.modal-left {
+    flex-basis: 40%;
+}
+.modal-right {
+    flex-basis: 60%;
+}
+.main-avatar {
+    background-color: #0b0b1a;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1rem;
+    border: 1px solid #3a3a5e;
+}
+.modal-left h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+.team-details-list p {
+    margin: 0.5rem 0;
+    color: #c0c0c0;
+}
+.team-details-list p strong {
+    color: #fff;
+    font-weight: 500;
+}
+.modal-left h4, .modal-right h4 {
+    font-size: 1.2rem;
+    margin: 2.5rem 0 1rem 0;
+    color: #a0a0c0;
+    font-weight: 400;
+}
+.members-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+.member-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.member-avatar-small {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #0b0b1a;
+    border: 1px solid #3a3a5e;
+}
+.member-item span em {
+    font-style: normal;
+    color: #a0a0c0;
+    font-size: 0.9rem;
+}
+.projects-list .project-item {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0b0b1a;
+    border: 1px solid #2a2a4e;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.75rem;
+}
