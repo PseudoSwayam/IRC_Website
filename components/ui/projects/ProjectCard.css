@@ -1,0 +1,47 @@
+.project-card {
+    background-color: #1a1a2e;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #2a2a4e;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 170, 255, 0.15);
+  }
+  
+  /*
+    Key fix for image rendering: This container must have a defined
+    size and be positioned relatively for the Image with "fill" to work.
+  */
+  .card-image-container {
+    position: relative; /* Required for Next.js Image with layout="fill" */
+    width: 100%;
+    aspect-ratio: 4 / 3; /* Give the container a defined shape */
+    background-color: #0b0b1a; /* Darker background for the image as in Figma */
+    padding: 1.5rem; /* Padding around the image */
+    box-sizing: border-box; /* Ensures padding is included in the dimensions */
+  }
+  
+  .card-content {
+    padding: 1.5rem;
+    background-color: #1a1a2e; /* Ensure background is consistent */
+    flex-grow: 1; /* Allows this part to take remaining space */
+  }
+  
+  .card-content h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0.75rem; /* More space after title */
+    color: #ffffff;
+    font-weight: 600;
+  }
+  
+  .card-content p {
+    font-size: 1rem;
+    color: #a0a0c0;
+    line-height: 1.5;
+  }

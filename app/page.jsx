@@ -8,13 +8,14 @@ import { Footer9 } from "../home/components/footer-09";
 
 export default function Page() {
   return (
-    <div>
+    // Wrap your entire page in a <main> tag with the "dark-bg" class
+    <main className="dark-bg">
       <Navbar2 />
       <Header30 />
       <Layout239 />
       <Layout239_1 />
       <Blog34 />
       <Footer9 />
-    </div>
+    </main>
   );
 }
