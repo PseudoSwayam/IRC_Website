@@ -44,10 +44,11 @@ export function Navbar2() {
     <section className="fixed top-4 left-4 right-4 z-[999] flex w-auto items-center bg-black/30 backdrop-blur-md border border-white/20 rounded-2xl lg:min-h-16 lg:px-[3%] shadow-2xl">
       <div className="mx-auto size-full lg:grid lg:grid-cols-[0.375fr_1fr_0.375fr] lg:items-center lg:justify-between lg:gap-4">
         <div className="flex min-h-14 items-center justify-between px-[4%] md:min-h-16 lg:min-h-full lg:px-0">
-          <a href="#">
+          <a href="/">
             <img
-              src="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"
-              alt="Logo image"
+              src="/irclogo.png"
+              alt="ITER Robotics Club Logo"
+              className="h-12 md:h-14 lg:h-16 w-auto"
             />
           </a>
           <div className="flex items-center gap-4 lg:hidden">
@@ -112,19 +113,19 @@ export function Navbar2() {
           className="overflow-hidden px-[5%] text-center lg:flex lg:items-center lg:justify-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto]"
         >
           <a
-            href="#"
+            href="/"
             className="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2 text-white hover:text-yellow-400 transition-colors"
           >
             Home
           </a>
           <a
-            href="#"
+            href="/teams"
             className="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2 text-white hover:text-yellow-400 transition-colors"
           >
-            About
+            Teams
           </a>
           <a
-            href="#"
+            href="/projects"
             className="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2 text-white hover:text-yellow-400 transition-colors"
           >
             Projects

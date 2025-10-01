@@ -1,4 +1,4 @@
-// File: /Users/swayamsahoo/Projects/IRC_Website/app/layout.js
+// File: C:\Users\rites\Downloads\futuristic-robotics-club-web-design\IRC_Website\app\layout.js
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

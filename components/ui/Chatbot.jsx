@@ -28,14 +28,13 @@ const faqData = [
   },
 ];
 
-// A sleek, custom robot icon using SVG
+// Bot logo component with spinning animation
 const ChatbotIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M12 8V4H8" />
-    <rect width="16" height="12" x="4" y="8" rx="2" />
-    <path d="M2 14h2" /><path d="M20 14h2" />
-    <path d="M15 13v2" /><path d="M9 13v2" />
-  </svg>
+  <img 
+    src="/botlogo.png" 
+    alt="Bot Logo" 
+    className="spinning-logo"
+  />
 );
 
 export default function Chatbot() {
@@ -43,6 +42,7 @@ export default function Chatbot() {
   const [messages, setMessages] = useState([
     { from: "bot", text: "Hello! I'm the ITER Robotics Club Bot. How can I assist you today?" }
   ]);
+  const [isRinging, setIsRinging] = useState(false);
   const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
@@ -54,6 +54,26 @@ export default function Chatbot() {
         scrollToBottom();
     }
   }, [messages, isOpen]);
+
+  // Trigger ringing animation on component mount
+  useEffect(() => {
+    const startRinging = () => {
+      setIsRinging(true);
+      // Stop ringing after animation completes
+      setTimeout(() => setIsRinging(false), 3000);
+    };
+
+    // First ring after 1 second
+    const timer1 = setTimeout(startRinging, 1000);
+    
+    // Ring again every 30 seconds to catch attention
+    const interval = setInterval(startRinging, 30000);
+
+    return () => {
+      clearTimeout(timer1);
+      clearInterval(interval);
+    };
+  }, []);
 
   const handleToggle = () => setIsOpen(!isOpen);
 
@@ -72,7 +92,11 @@ export default function Chatbot() {
     <>
       {/* Floating Toggle Button */}
       {!isOpen && (
-        <button onClick={handleToggle} className="chatbot-toggle-button" aria-label="Open Chatbot">
+        <button 
+          onClick={handleToggle} 
+          className={`chatbot-toggle-button ${isRinging ? 'ringing' : ''}`} 
+          aria-label="Open Chatbot"
+        >
           <ChatbotIcon />
         </button>
       )}

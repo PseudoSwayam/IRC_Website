@@ -102,6 +102,93 @@
   animation: float-right 3.5s ease-in-out infinite;
 }
 
+/* Mobile responsive floating images - more visible */
+@media (max-width: 768px) {
+  .floating-card-left {
+    top: 35%;
+    left: -15%; /* More visible on left */
+    width: 200px;
+    transform: rotate(-6deg);
+  }
+  
+  .floating-card-right {
+    top: 45%;
+    right: -15%; /* More visible on right */
+    width: 200px;
+    transform: rotate(6deg);
+  }
+  
+  .floating-image-large {
+    width: 200px; /* Larger on mobile for better visibility */
+  }
+  
+  .floating-image {
+    width: 180px; /* Larger base size on mobile */
+  }
+  
+  
+  /* Fix mobile typography centering */
+  .word-iter,
+  .word-robotics,
+  .word-club {
+    transform: translateX(0) !important; /* Reset all word positioning */
+    text-align: center !important;
+    width: 100% !important;
+    display: block !important;
+  }
+  
+  /* Mobile typography adjustments */
+  .letter {
+    font-size: 1em !important; /* Keep same size as PC for consistency */
+    display: inline-block;
+  }
+  
+  .letter:hover {
+    transform: scale(1.15) translateY(-10px) rotate(3deg); /* Reduced hover effect on mobile */
+  }
+  
+  /* Mobile hero section spacing - balanced */
+  .hero-mesh-bg {
+    padding-top: 3rem !important; /* Balanced top padding on mobile */
+  }
+  
+  /* Force mobile hero content positioning */
+  .hero-mesh-bg {
+    min-height: 100vh !important;
+  }
+  
+  .hero-mesh-bg .flex {
+    align-items: flex-start !important;
+    justify-content: center !important;
+    padding-top: 8rem !important;
+    padding-bottom: 2rem !important;
+    min-height: 70vh !important;
+  }
+  
+}
+
+/* Extra small devices (phones) */
+@media (max-width: 480px) {
+  .floating-card-left {
+    left: -20%; /* Still visible on very small screens */
+    width: 170px;
+  }
+  
+  .floating-card-right {
+    right: -20%; /* Still visible on very small screens */
+    width: 170px;
+  }
+  
+  .floating-image-large {
+    width: 170px;
+  }
+  
+  .floating-image {
+    width: 150px;
+  }
+  
+}
+
 @keyframes float-left {
   0%, 100% {
     transform: rotate(-8deg) translateY(0px);
@@ -256,6 +343,39 @@
   letter-spacing: inherit;
   line-height: 1.2;
   color: white;
+}
+
+/* Warning triangle signs */
+.warning-sign {
+  position: relative;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 14px solid #000;
+  margin: 0 2px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  line-height: 1;
+}
+
+.warning-sign::before {
+  content: '!';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+  width: 16px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 

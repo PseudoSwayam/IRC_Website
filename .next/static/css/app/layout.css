@@ -618,6 +618,9 @@ video {
 .mb-6{
   margin-bottom: 1.5rem;
 }
+.mb-8{
+  margin-bottom: 2rem;
+}
 .ml-2{
   margin-left: 0.5rem;
 }
@@ -675,8 +678,11 @@ video {
 .h-11{
   height: 2.75rem;
 }
-.h-6{
-  height: 1.5rem;
+.h-12{
+  height: 3rem;
+}
+.h-4{
+  height: 1rem;
 }
 .h-9{
   height: 2.25rem;
@@ -690,8 +696,11 @@ video {
 .min-h-14{
   min-height: 3.5rem;
 }
-.min-h-svh{
-  min-height: 100svh;
+.min-h-\[70vh\]{
+  min-height: 70vh;
+}
+.min-h-screen{
+  min-height: 100vh;
 }
 .w-6{
   width: 1.5rem;
@@ -782,10 +791,10 @@ video {
 .gap-y-4{
   row-gap: 1rem;
 }
-.space-x-6 > :not([hidden]) ~ :not([hidden]){
+.space-x-3 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
-  margin-right: calc(1.5rem * var(--tw-space-x-reverse));
-  margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+  margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .justify-self-end{
   justify-self: end;
@@ -829,6 +838,10 @@ video {
 }
 .bg-black\/40{
   background-color: rgb(0 0 0 / 0.4);
+}
+.bg-blue-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
 }
 .bg-gray-200{
   --tw-bg-opacity: 1;
@@ -921,8 +934,15 @@ video {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
+.py-8{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
 .pb-4{
   padding-bottom: 1rem;
+}
+.pt-12{
+  padding-top: 3rem;
 }
 .pt-16{
   padding-top: 4rem;
@@ -936,13 +956,17 @@ video {
 .text-start{
   text-align: start;
 }
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
 .text-5xl{
   font-size: 3rem;
   line-height: 1;
 }
-.text-base{
-  font-size: 1rem;
-  line-height: 1.5rem;
+.text-6xl{
+  font-size: 3.75rem;
+  line-height: 1;
 }
 .text-sm{
   font-size: 0.875rem;
@@ -971,6 +995,10 @@ video {
 .text-gray-300{
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity, 1));
+}
+.text-gray-400{
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity, 1));
 }
 .text-gray-700{
   --tw-text-opacity: 1;
@@ -1007,8 +1035,20 @@ video {
 .outline{
   outline-style: solid;
 }
+.ring{
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+.blur{
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
 .backdrop-blur-md{
   --tw-backdrop-blur: blur(12px);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+.backdrop-filter{
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 .transition{
@@ -1202,6 +1242,11 @@ a {
   padding-top: 1.75rem;
 }
 
+.hover\:bg-blue-700:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:bg-white\/20:hover{
   background-color: rgb(255 255 255 / 0.2);
 }
@@ -1323,8 +1368,20 @@ a {
     margin-top: 2rem;
   }
 
+  .md\:h-14{
+    height: 3.5rem;
+  }
+
+  .md\:h-6{
+    height: 1.5rem;
+  }
+
   .md\:min-h-16{
     min-height: 4rem;
+  }
+
+  .md\:min-h-svh{
+    min-height: 100svh;
   }
 
   .md\:grid-flow-col{
@@ -1369,8 +1426,19 @@ a {
     row-gap: 1rem;
   }
 
+  .md\:space-x-6 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   .md\:p-12{
     padding: 3rem;
+  }
+
+  .md\:py-16{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   .md\:py-18{
@@ -1387,6 +1455,10 @@ a {
     padding-bottom: 0px;
   }
 
+  .md\:pt-16{
+    padding-top: 4rem;
+  }
+
   .md\:pt-8{
     padding-top: 2rem;
   }
@@ -1394,6 +1466,11 @@ a {
   .md\:text-7xl{
     font-size: 4.5rem;
     line-height: 1;
+  }
+
+  .md\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -1429,6 +1506,10 @@ a {
 
   .lg\:hidden{
     display: none;
+  }
+
+  .lg\:h-16{
+    height: 4rem;
   }
 
   .lg\:min-h-16{
@@ -1531,6 +1612,11 @@ a {
   .lg\:py-20{
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+
+  .lg\:py-24{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 
   .lg\:py-28{
@@ -1679,6 +1765,93 @@ a {
   right: 15%;
   transform: rotate(6deg);
   animation: float-right 3.5s ease-in-out infinite;
+}
+
+/* Mobile responsive floating images - more visible */
+@media (max-width: 768px) {
+  .floating-card-left {
+    top: 35%;
+    left: -15%; /* More visible on left */
+    width: 200px;
+    transform: rotate(-6deg);
+  }
+  
+  .floating-card-right {
+    top: 45%;
+    right: -15%; /* More visible on right */
+    width: 200px;
+    transform: rotate(6deg);
+  }
+  
+  .floating-image-large {
+    width: 200px; /* Larger on mobile for better visibility */
+  }
+  
+  .floating-image {
+    width: 180px; /* Larger base size on mobile */
+  }
+  
+  
+  /* Fix mobile typography centering */
+  .word-iter,
+  .word-robotics,
+  .word-club {
+    transform: translateX(0) !important; /* Reset all word positioning */
+    text-align: center !important;
+    width: 100% !important;
+    display: block !important;
+  }
+  
+  /* Mobile typography adjustments */
+  .letter {
+    font-size: 1em !important; /* Keep same size as PC for consistency */
+    display: inline-block;
+  }
+  
+  .letter:hover {
+    transform: scale(1.15) translateY(-10px) rotate(3deg); /* Reduced hover effect on mobile */
+  }
+  
+  /* Mobile hero section spacing - balanced */
+  .hero-mesh-bg {
+    padding-top: 3rem !important; /* Balanced top padding on mobile */
+  }
+  
+  /* Force mobile hero content positioning */
+  .hero-mesh-bg {
+    min-height: 100vh !important;
+  }
+  
+  .hero-mesh-bg .flex {
+    align-items: flex-start !important;
+    justify-content: center !important;
+    padding-top: 8rem !important;
+    padding-bottom: 2rem !important;
+    min-height: 70vh !important;
+  }
+  
+}
+
+/* Extra small devices (phones) */
+@media (max-width: 480px) {
+  .floating-card-left {
+    left: -20%; /* Still visible on very small screens */
+    width: 170px;
+  }
+  
+  .floating-card-right {
+    right: -20%; /* Still visible on very small screens */
+    width: 170px;
+  }
+  
+  .floating-image-large {
+    width: 170px;
+  }
+  
+  .floating-image {
+    width: 150px;
+  }
+  
 }
 
 @keyframes float-left {
@@ -1837,6 +2010,39 @@ a {
   color: white;
 }
 
+/* Warning triangle signs */
+.warning-sign {
+  position: relative;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 14px solid #000;
+  margin: 0 2px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  line-height: 1;
+}
+
+.warning-sign::before {
+  content: '!';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+  width: 16px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 /*!***********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./components/ui/chatbot.css ***!
@@ -1847,29 +2053,73 @@ a {
   color palette from the provided UI design for a beautiful, integrated look.
 */
 
-/* Floating Toggle Button */
+/* Floating Toggle Button - Just the logo */
 .chatbot-toggle-button {
     position: fixed;
     bottom: 1.5rem;
     right: 1.5rem;
     z-index: 1000;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
     border: none;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-    /* Gradient from image: Blue to Cyan */
-    background: linear-gradient(45deg, #3F37FF, #28C5B4, #00FFF7);
-    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.3s ease;
+    background: transparent;
+    padding: 0;
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), filter 0.3s ease;
   }
   
   .chatbot-toggle-button:hover {
-    transform: scale(1.1) rotate(10deg);
-    box-shadow: 0 12px 30px rgba(40, 197, 180, 0.5); /* Glowing effect */
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8)) brightness(1.2);
+  }
+  
+  /* Ringing animation */
+  @keyframes ring {
+    0% { transform: rotate(0deg); }
+    5% { transform: rotate(15deg); }
+    10% { transform: rotate(-10deg); }
+    15% { transform: rotate(15deg); }
+    20% { transform: rotate(-5deg); }
+    25% { transform: rotate(10deg); }
+    30% { transform: rotate(-10deg); }
+    35% { transform: rotate(5deg); }
+    40% { transform: rotate(-5deg); }
+    45% { transform: rotate(3deg); }
+    50% { transform: rotate(-3deg); }
+    55% { transform: rotate(2deg); }
+    60% { transform: rotate(-2deg); }
+    65% { transform: rotate(1deg); }
+    70% { transform: rotate(-1deg); }
+    75% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  .chatbot-toggle-button.ringing {
+    animation: ring 3s ease-in-out;
+    transform-origin: center center;
+  }
+  
+  /* Ensure ringing animation overrides hover effects */
+  .chatbot-toggle-button.ringing:hover {
+    animation: ring 3s ease-in-out;
+    transform-origin: center center;
+  }
+  
+  /* Continuous spinning animation for bot logo */
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  .spinning-logo {
+    animation: spin 3s linear infinite;
+    width: 4rem;
+    height: 4rem;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  }
+  
+  /* When ringing, combine both animations */
+  .chatbot-toggle-button.ringing .spinning-logo {
+    animation: spin 3s linear infinite, ring 3s ease-in-out;
+    animation-fill-mode: forwards;
   }
   
   /* The SVG icon inside the button */
@@ -1897,8 +2147,8 @@ a {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    /* Gradient from image: Dark Blue to Teal */
-    background: linear-gradient(135deg, #121417, #162032, #28C5B4);
+    /* Dark theme gradient */
+    background: linear-gradient(135deg, #0F0F0F, #1A1A1A, #2D2D2D);
     animation: slideInUp 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
   
@@ -1984,14 +2234,14 @@ a {
   }
   
   .message.user {
-    background-color: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, #2A2A2A, #3A3A3A);
     color: #ECA72C; /* Gold from image */
     margin-left: auto;
     border-bottom-right-radius: 0.2rem;
   }
   
   .message.bot {
-    background: linear-gradient(to right, #1A2B4C, #3F37FF); /* Blue gradient from image */
+    background: linear-gradient(135deg, #1A1A1A, #2D2D2D); /* Dark gradient for bot messages */
     color: #FCF8EC;
     margin-right: auto;
     border-bottom-left-radius: 0.2rem;
@@ -2018,8 +2268,9 @@ a {
   }
   
   .chatbot-question-button:hover {
-    background-color: rgba(255, 255, 255, 0.15);
+    background: linear-gradient(135deg, #2D2D2D, #404040);
     color: #FCF8EC;
-    border-color: #28C5B4;
+    border-color: #555;
     transform: translateY(-2px);
   }
+

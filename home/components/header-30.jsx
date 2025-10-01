@@ -26,10 +26,10 @@ export function Header30() {
   }, []);
 
   return (
-    <section className="relative px-[5%] overflow-hidden pt-16 hero-mesh-bg">
+    <section className="relative px-[5%] overflow-hidden pt-12 md:pt-16 hero-mesh-bg">
       {/* First Diagonal Tape Strip */}
-      <div className={`absolute top-[58%] left-[-10%] right-[-10%] z-40 h-6 tape-strip transform -rotate-6 flex items-center overflow-hidden ${beltClass}`}>
-        <div className="flex items-center space-x-6 text-black font-semibold text-base whitespace-nowrap animate-scroll">
+      <div className={`absolute top-[58%] left-[-10%] right-[-10%] z-40 h-4 md:h-6 tape-strip transform -rotate-6 flex items-center overflow-hidden ${beltClass}`}>
+        <div className="flex items-center space-x-3 md:space-x-6 text-black font-semibold text-xs md:text-base whitespace-nowrap animate-scroll">
           <span>ROBOTICS</span>
           <span>•</span>
           <span>AI & ML</span>
@@ -61,8 +61,8 @@ export function Header30() {
       </div>
       
       {/* Second Horizontal Tape Strip - Darker Yellow Cross */}
-      <div className={`absolute top-[54%] left-[-10%] right-[-10%] z-41 h-6 tape-strip-dark flex items-center overflow-hidden ${beltClass}`}>
-        <div className="flex items-center space-x-6 text-black font-semibold text-base whitespace-nowrap animate-scroll-reverse">
+      <div className={`absolute top-[54%] left-[-10%] right-[-10%] z-41 h-4 md:h-6 tape-strip-dark flex items-center overflow-hidden ${beltClass}`}>
+        <div className="flex items-center space-x-3 md:space-x-6 text-black font-semibold text-xs md:text-base whitespace-nowrap animate-scroll-reverse">
           <span>ROBOTICS</span>
           <span>•</span>
           <span>AI & ML</span>
@@ -107,7 +107,7 @@ export function Header30() {
       />
       
       <div className="relative z-20 container">
-        <div className="flex max-h-[60rem] min-h-svh items-center justify-center py-16 text-center md:py-24 lg:py-28">
+        <div className="flex max-h-[60rem] min-h-[70vh] md:min-h-svh items-start md:items-center justify-center py-8 pt-16 md:py-16 lg:py-24 text-center">
           <div className="w-full max-w-lg">
             <h1 className="text-5xl md:text-7xl lg:text-8xl mb-5 font-bold text-white md:mb-6 relative z-30 leading-tight" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)', textAlign: 'center'}}>
               <div className="block word-iter">

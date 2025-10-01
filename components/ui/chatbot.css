@@ -4,29 +4,73 @@
   color palette from the provided UI design for a beautiful, integrated look.
 */
 
-/* Floating Toggle Button */
+/* Floating Toggle Button - Just the logo */
 .chatbot-toggle-button {
     position: fixed;
     bottom: 1.5rem;
     right: 1.5rem;
     z-index: 1000;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
     border: none;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-    /* Gradient from image: Blue to Cyan */
-    background: linear-gradient(45deg, #3F37FF, #28C5B4, #00FFF7);
-    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.3s ease;
+    background: transparent;
+    padding: 0;
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), filter 0.3s ease;
   }
   
   .chatbot-toggle-button:hover {
-    transform: scale(1.1) rotate(10deg);
-    box-shadow: 0 12px 30px rgba(40, 197, 180, 0.5); /* Glowing effect */
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8)) brightness(1.2);
+  }
+  
+  /* Ringing animation */
+  @keyframes ring {
+    0% { transform: rotate(0deg); }
+    5% { transform: rotate(15deg); }
+    10% { transform: rotate(-10deg); }
+    15% { transform: rotate(15deg); }
+    20% { transform: rotate(-5deg); }
+    25% { transform: rotate(10deg); }
+    30% { transform: rotate(-10deg); }
+    35% { transform: rotate(5deg); }
+    40% { transform: rotate(-5deg); }
+    45% { transform: rotate(3deg); }
+    50% { transform: rotate(-3deg); }
+    55% { transform: rotate(2deg); }
+    60% { transform: rotate(-2deg); }
+    65% { transform: rotate(1deg); }
+    70% { transform: rotate(-1deg); }
+    75% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  .chatbot-toggle-button.ringing {
+    animation: ring 3s ease-in-out;
+    transform-origin: center center;
+  }
+  
+  /* Ensure ringing animation overrides hover effects */
+  .chatbot-toggle-button.ringing:hover {
+    animation: ring 3s ease-in-out;
+    transform-origin: center center;
+  }
+  
+  /* Continuous spinning animation for bot logo */
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  .spinning-logo {
+    animation: spin 3s linear infinite;
+    width: 4rem;
+    height: 4rem;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  }
+  
+  /* When ringing, combine both animations */
+  .chatbot-toggle-button.ringing .spinning-logo {
+    animation: spin 3s linear infinite, ring 3s ease-in-out;
+    animation-fill-mode: forwards;
   }
   
   /* The SVG icon inside the button */
@@ -54,8 +98,9 @@
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    /* Gradient from image: Dark Blue to Teal */
-    background: linear-gradient(135deg, #121417, #162032, #28C5B4);
+    /* Dark theme gradient */
+    background: linear-gradient(135deg, #0F0F0F, #1A1A1A, #2D2D2D);
+    animation: slideInUp 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
     animation: slideInUp 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
   
@@ -141,14 +186,14 @@
   }
   
   .message.user {
-    background-color: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, #2A2A2A, #3A3A3A);
     color: #ECA72C; /* Gold from image */
     margin-left: auto;
     border-bottom-right-radius: 0.2rem;
   }
   
   .message.bot {
-    background: linear-gradient(to right, #1A2B4C, #3F37FF); /* Blue gradient from image */
+    background: linear-gradient(135deg, #1A1A1A, #2D2D2D); /* Dark gradient for bot messages */
     color: #FCF8EC;
     margin-right: auto;
     border-bottom-left-radius: 0.2rem;
@@ -175,8 +220,8 @@
   }
   
   .chatbot-question-button:hover {
-    background-color: rgba(255, 255, 255, 0.15);
+    background: linear-gradient(135deg, #2D2D2D, #404040);
     color: #FCF8EC;
-    border-color: #28C5B4;
+    border-color: #555;
     transform: translateY(-2px);
   }

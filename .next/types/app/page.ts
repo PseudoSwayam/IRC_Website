@@ -1,4 +1,4 @@
-// File: /Users/swayamsahoo/Projects/IRC_Website/app/page.jsx
+// File: C:\Users\rites\Downloads\futuristic-robotics-club-web-design\IRC_Website\app\page.jsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
