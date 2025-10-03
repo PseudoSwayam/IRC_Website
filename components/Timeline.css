@@ -1,0 +1,161 @@
+/**
+ * Timeline Component Styles
+ * Performance optimized with hardware acceleration and minimal reflows
+ */
+
+/* Hardware acceleration for smooth animations */
+.timeline-section {
+  transform: translateZ(0);
+  will-change: scroll-position;
+}
+
+.timeline-step {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+.timeline-pin {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Progressive path drawing animations */
+.timeline-animated-path {
+  transform: translateZ(0);
+  will-change: stroke-dashoffset;
+}
+
+.mobile-timeline-animated-path {
+  transform: translateZ(0);
+  will-change: stroke-dashoffset;
+}
+
+/* Fallback styles if Tailwind CSS is not available */
+@media (max-width: 0) {
+  .timeline-section {
+    position: relative;
+    padding: 5rem 1rem;
+    min-height: 100vh;
+    background: transparent;
+    overflow: hidden;
+  }
+
+  .timeline-card {
+    background: rgba(17, 24, 39, 0.8);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(75, 85, 99, 1);
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 28rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  .timeline-heading {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.75rem;
+    transition: color 0.3s ease;
+  }
+
+  .timeline-heading.active {
+    color: #1f3fff;
+  }
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  .timeline-section {
+    padding: 3rem 1rem;
+  }
+  
+  .timeline-step {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+  
+  .timeline-card {
+    text-align: center !important;
+    max-width: 100% !important;
+  }
+  
+  .timeline-connector {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .timeline-section h2 {
+    font-size: 2.25rem;
+  }
+  
+  .timeline-heading {
+    font-size: 1.5rem;
+  }
+  
+  .timeline-card {
+    padding: 1.5rem;
+  }
+}
+
+/* Reduced motion fallback */
+@media (prefers-reduced-motion: reduce) {
+  .timeline-step {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  
+  .timeline-path {
+    stroke-dasharray: none !important;
+    stroke-dashoffset: 0 !important;
+  }
+  
+  .timeline-pin {
+    position: static !important;
+    transform: none !important;
+  }
+}
+
+/* Focus styles for accessibility */
+.timeline-step:focus {
+  outline: 2px solid #8B5CF6;
+  outline-offset: 4px;
+  border-radius: 0.5rem;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .timeline-card {
+    border: 2px solid white;
+    background: black;
+  }
+  
+  .timeline-heading {
+    color: white !important;
+  }
+  
+  .timeline-path {
+    stroke: white !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .timeline-section {
+    break-inside: avoid;
+  }
+  
+  .timeline-step {
+    opacity: 1 !important;
+    transform: none !important;
+    margin-bottom: 2rem;
+  }
+  
+  .timeline-pin,
+  .timeline-path {
+    display: none;
+  }
+}
