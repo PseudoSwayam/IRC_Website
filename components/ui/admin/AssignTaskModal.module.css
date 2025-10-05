@@ -1,0 +1,160 @@
+/*
+  ======================================================
+    Final, Polished 'Assign Task' Modal (CSS Module)
+  ======================================================
+*/
+
+/* Glassmorphism overlay for consistency */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(18, 18, 28, 0.5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+  }
+  
+  /* Modal card styling */
+  .modalContent {
+    background: var(--admin-card-bg);
+    border-radius: 16px;
+    width: 90%;
+    max-width: 550px;
+    border: 1px solid var(--admin-border-color);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    animation: slideIn 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    overflow: hidden;
+  }
+  
+  @keyframes slideIn {
+    from { opacity: 0; transform: scale(0.95) translateY(20px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+  }
+  
+  .modalHeader {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid var(--admin-border-color);
+    background: rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  .modalTitle { font-size: 1.5rem; margin: 0; }
+  .modalSubtitle { color: var(--admin-text-secondary); margin-top: 4px; }
+  .modalCloseBtn {
+    position: absolute; top: 15px; right: 20px; background: rgba(0,0,0,0.2); width: 30px;
+    height: 30px; border: 1px solid var(--admin-border-color); border-radius: 50%;
+    color: var(--admin-text-secondary); font-size: 1.5rem; line-height: 28px;
+    cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; justify-content: center; padding-bottom: 3px; line-height: 1;
+  }
+  .modalCloseBtn:hover { background: var(--admin-border-color); color: #fff; transform: scale(1.1) rotate(90deg)}
+  
+  /* === Form Styles === */
+  .taskForm { padding: 2rem 2.5rem; }
+  .formGroup { margin-bottom: 1.75rem; }
+  .formGroup label { display: block; margin-bottom: 0.6rem; font-size: 0.9rem; font-weight: 500; color: var(--admin-text-secondary); }
+  
+  /* Custom Input and Select boxes */
+  .input, .select {
+    width: 100%; padding: 0.8rem 1rem; border-radius: 8px;
+    border: 1px solid var(--admin-border-color); background-color: #12121c;
+    color: var(--admin-text-primary); font-size: 1rem; transition: all 0.2s ease;
+    -webkit-appearance: none; appearance: none;
+  }
+  .input:focus, .select:focus {
+    outline: none; border-color: var(--admin-accent-blue);
+    box-shadow: 0 0 0 3px rgba(62, 123, 248, 0.2);
+  }
+  .select { /* Custom arrow for the dropdown */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23A0AEC0%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: .65em auto;
+    padding-right: 2.5rem; /* Make room for the arrow */
+  }
+  
+  .formRow { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  
+  /* Custom Range Slider */
+  .rangeSlider {
+    -webkit-appearance: none; appearance: none; width: 100%; height: 6px;
+    outline: none; cursor: pointer; border-radius: 3px;
+    /* Dynamic background fill driven by JS */
+    background: linear-gradient(to right, var(--admin-accent-cyan) var(--progress), var(--admin-border-color) var(--progress));
+  }
+  .rangeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none; width: 20px; height: 20px;
+    border-radius: 50%; background: var(--admin-accent-cyan); border: 3px solid var(--admin-card-bg);
+    box-shadow: 0 0 5px rgba(57, 211, 180, 0.5); cursor: pointer; transition: transform 0.2s ease;
+  }
+  .rangeSlider::-webkit-slider-thumb:hover { transform: scale(1.1); }
+  .rangeSlider::-moz-range-thumb {
+    width: 20px; height: 20px; border-radius: 50%; background: var(--admin-accent-cyan);
+    border: 3px solid var(--admin-card-bg); box-shadow: 0 0 5px rgba(57, 211, 180, 0.5);
+    cursor: pointer;
+  }
+  
+  /* Action buttons and Error message */
+  .formActions {
+    margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--admin-border-color);
+    display: flex; justify-content: flex-end; gap: 1rem;
+  }
+  .formActions button {
+    padding: 0.75rem 1.75rem; font-size: 1rem; font-weight: 600;
+    border-radius: 8px; border: none; cursor: pointer; transition: all 0.2s ease;
+  }
+  .btnCancel {
+    background-color: transparent; border: 1px solid var(--admin-border-color); color: var(--admin-text-secondary);
+  }
+  .btnCancel:hover { background-color: var(--admin-border-color); color: #fff; }
+  .btnSubmit { background-color: var(--admin-accent-blue); color: #fff; }
+  .btnSubmit:hover { background-color: #2a62d1; box-shadow: 0 4px 15px rgba(62, 123, 248, 0.2); transform: translateY(-2px); }
+  .btnSubmit:disabled { opacity: 0.5; cursor: not-allowed; box-shadow: none; transform: none; }
+  .errorMessage { color: var(--caution-red); font-size: 0.9rem; margin-top: -1rem; margin-bottom: 1rem; }
+  .readOnlyField {
+    font-size: 1rem;
+    color: var(--admin-text-primary);
+    background-color: #12121c;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--admin-border-color);
+  }
+/*
+  ==============================================
+    Add this snippet to the end of the file
+  ==============================================
+*/
+
+.dangerBtn {
+    background-color: var(--caution-red);
+    color: #fff;
+    /* Add flex properties to center the icon and text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    /* Other button styles */
+    padding: 0.75rem 1.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .dangerBtn:hover {
+    background-color: #C53030; /* A darker red on hover */
+    box-shadow: 0 4px 15px rgba(229, 62, 62, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .dangerBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+  }

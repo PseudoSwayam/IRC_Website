@@ -1,0 +1,54 @@
+.skeletonCard {
+    background-color: var(--admin-card-bg);
+    border: 1px solid var(--admin-border-color);
+    padding: 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #2D3748;
+    flex-shrink: 0;
+}
+
+.textBlock {
+    flex-grow: 1;
+}
+
+.line1, .line2, .line3 {
+    background-color: #2D3748;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+}
+
+.line1 { width: 70%; height: 1rem; }
+.line2 { width: 40%; height: 0.75rem; }
+.line3 { width: 90%; height: 0.75rem; margin-bottom: 0; }
+
+/* The shimmering effect */
+.skeletonCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    height: 100%;
+    width: 150%;
+    background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.08) 50%, transparent 100%);
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
