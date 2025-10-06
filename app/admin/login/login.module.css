@@ -1,0 +1,113 @@
+/*
+  ======================================================
+     Final, Polished 'Admin Login' (CSS Module)
+  ======================================================
+*/
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    color: var(--admin-text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    
+    background: linear-gradient(135deg, #12121c, #1A202C, #12121c, #2D3748);
+    background-size: 400% 400%;
+    animation: gradientBG 25s ease infinite;
+}
+
+@keyframes gradientBG {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
+}
+
+.loginCard {
+    width: 100%;
+    max-width: 420px;
+    background-color: var(--admin-card-bg);
+    border-radius: 16px;
+    border: 1px solid var(--admin-border-color);
+    padding: 3rem;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+    text-align: center;
+    position: relative;
+    animation: popIn 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@keyframes popIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+
+/* --- THIS IS THE DEFINITIVE FIX --- */
+.logoContainer {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    
+    /* 1. Use the main card background so it blends in */
+    background-color: var(--admin-card-bg); 
+    
+    /* 2. A subtle inner shadow to create the "pressed" effect */
+    box-shadow: inset 0 2px 4px 0 rgba(0,0,0,0.5), 0 2px 2px 0 rgba(255,255,255,0.05);
+
+    /* 3. A slightly lighter border for definition */
+    border: 1px solid hsl(220, 16%, 30%); 
+    
+    /* Make the logo image sit perfectly in the center */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Positioning from before, remains the same */
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 3rem 0 0.5rem 0;
+}
+
+.subtitle {
+    color: var(--admin-text-secondary);
+    margin-bottom: 2.5rem;
+}
+
+
+/* --- The rest of the file is identical to the previous version --- */
+.loginForm { text-align: left; }
+.formGroup { margin-bottom: 1.5rem; }
+.formGroup label { display: block; margin-bottom: 0.5rem; font-weight: 500; color: var(--admin-text-secondary); }
+
+.inputWrapper { position: relative; }
+.inputIcon { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--admin-text-secondary); }
+.input {
+    width: 100%; padding: 0.9rem 1rem 0.9rem 3rem; border-radius: 8px;
+    border: 1px solid var(--admin-border-color); background-color: #12121c;
+    color: var(--admin-text-primary); font-size: 1rem; transition: all 0.2s ease;
+}
+.input:focus {
+    outline: none; border-color: var(--admin-accent-blue);
+    box-shadow: 0 0 0 3px rgba(62, 123, 248, 0.2);
+}
+
+.submitButton {
+    width: 100%; padding: 0.9rem; font-size: 1.1rem; font-weight: 600;
+    border-radius: 8px; border: none; cursor: pointer; background-color: var(--admin-accent-blue);
+    color: #fff; transition: all 0.2s ease; margin-top: 1.5rem;
+    display: flex; align-items: center; justify-content: center; gap: 0.75rem;
+}
+.submitButton:hover {
+    background-color: #2a62d1; box-shadow: 0 4px 15px rgba(62, 123, 248, 0.3);
+    transform: translateY(-2px);
+}
+.submitButton:disabled { opacity: 0.7; cursor: not-allowed; }
+
+.spinner { width: 20px; height: 20px; border: 2px solid #fff; border-bottom-color: transparent; border-radius: 50%; display: inline-block; box-sizing: border-box; animation: rotation 1s linear infinite; }
+@keyframes rotation { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+.errorMessage { color: var(--caution-red); background-color: rgba(229, 62, 62, 0.1); border: 1px solid var(--caution-red); padding: 0.75rem; border-radius: 8px; text-align: center; margin-bottom: 1.5rem; font-size: 0.9rem; }

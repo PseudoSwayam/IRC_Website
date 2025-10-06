@@ -1,0 +1,152 @@
+/*
+  ==============================================
+    Complete CSS for the Admin Dashboard Page
+  ==============================================
+*/
+
+/* --- Color Palette and Font --- */
+:root {
+    --admin-bg-dark: #12121c;
+    --admin-card-bg: #1A202C;
+    --admin-border-color: #2D3748;
+    --admin-text-primary: #E2E8F0;
+    --admin-text-secondary: #A0AEC0;
+    --admin-accent-cyan: #39D3B4;
+    --admin-accent-blue: #3E7BF8;
+    --status-completed: #39D3B4;
+    --caution-red: #E53E3E;
+  }
+  
+  /* --- Animated Gradient Background --- */
+  .admin-page-container {
+    color: var(--admin-text-primary);
+    min-height: 100vh;
+    padding: 2rem 3.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+    /* Animated background properties */
+    background: linear-gradient(135deg, #12121c, #1A202C, #12121c, #2D3748);
+    background-size: 400% 400%;
+    animation: gradientBG 25s ease infinite;
+  }
+  
+  @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+  }
+  
+  /* --- Header & Branding Styles --- */
+  .page-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--admin-border-color);
+  }
+  
+  .header-branding {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  
+  .header-branding h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: -0.5px;
+  }
+  
+  .subtitle {
+    color: var(--admin-text-secondary);
+    margin: 4px 0 0 0;
+    font-size: 0.9rem;
+  }
+  
+  /* --- Add User Button --- */
+  .add-user-btn {
+    background: var(--admin-accent-blue);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .add-user-btn:hover {
+    background-color: #2a62d1;
+    box-shadow: 0 4px 15px rgba(62, 123, 248, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  
+  /* --- Search Bar Styles --- */
+  .search-container {
+      position: relative;
+      max-width: 600px;
+      margin: 0 auto;
+  }
+  
+  .search-icon {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--admin-text-secondary);
+      pointer-events: none; /* Make icon unclickable */
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 0.85rem 1rem 0.85rem 3.5rem; 
+    border-radius: 8px;
+    border: 1px solid var(--admin-border-color);
+    background-color: #12121c;
+    color: var(--admin-text-primary);
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+  
+  .search-input::placeholder {
+      color: var(--admin-text-secondary);
+  }
+  
+  .search-input:focus {
+      outline: none;
+      border-color: var(--admin-accent-blue);
+      box-shadow: 0 0 0 3px rgba(62, 123, 248, 0.2);
+  }
+
+  .header-actions {
+    /* This ensures the right-hand column has a defined space, balancing the grid. */
+    min-width: 100px;
+    text-align: right;
+  }
+  
+  /* --- No Results Message --- */
+  .no-results-message {
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--admin-text-secondary);
+  }
+  
+  /* 
+    Fallback grid style. Note that the specific team grid for MemberSection 
+    will be defined in its own CSS, making this a general helper.
+  */
+  .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+  }

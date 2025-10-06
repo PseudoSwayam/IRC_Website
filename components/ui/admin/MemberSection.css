@@ -1,0 +1,17 @@
+.member-section {
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--admin-text-secondary);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--admin-border-color);
+}
+
+.no-members-message {
+    font-style: italic;
+    color: var(--admin-text-secondary);
+}
