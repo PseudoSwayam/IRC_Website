@@ -146,7 +146,7 @@
   
   /* Mobile hero section spacing - balanced */
   .hero-mesh-bg {
-    padding-top: 3rem !important; /* Balanced top padding on mobile */
+    padding-top: 6rem !important; /* More top padding to avoid navbar on mobile */
   }
   
   /* Force mobile hero content positioning */
@@ -155,9 +155,9 @@
   }
   
   .hero-mesh-bg .flex {
-    align-items: flex-start !important;
+    align-items: center !important;
     justify-content: center !important;
-    padding-top: 8rem !important;
+    padding-top: 2rem !important;
     padding-bottom: 2rem !important;
     min-height: 70vh !important;
   }

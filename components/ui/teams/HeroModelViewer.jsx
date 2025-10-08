@@ -23,21 +23,9 @@ const HeroModelViewer = ({ modelPath }) => {
     >
       <Suspense fallback={null}>
         <Stage preset="rembrandt" intensity={0.8} environment="city">
-          
-          {/* 
-            --- THE DEFINITIVE FIX ---
-            These new rotation values are precisely calibrated to match your last screenshot.
-            
-            How to read this: [x, y, z]
-            [0.2, -2.35, 0] means:
-             - Tilt the model BACK slightly (on the X-axis) by 0.2 radians, to show more of its top surface.
-             - Rotate it CLOCKWISE (on the Y-axis) by 2.35 radians (~135 degrees), to get the perfect side/three-quarter view.
-             - No roll on the Z-axis.
-          */}
           <group rotation={[0.1, -2.35, 0.1]}>
             <Model modelPath={modelPath} />
           </group>
-
         </Stage>
       </Suspense>
 
@@ -45,8 +33,8 @@ const HeroModelViewer = ({ modelPath }) => {
         autoRotate
         autoRotateSpeed={0.5}
         enableZoom={false}
-        minPolarAngle={Math.PI / 4} // Prevents looking from too high
-        maxPolarAngle={Math.PI / 1.8} // Prevents looking from below
+        minPolarAngle={Math.PI / 4}
+        maxPolarAngle={Math.PI / 1.8}
       />
     </Canvas>
   );

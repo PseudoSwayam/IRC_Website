@@ -61,7 +61,7 @@
   }
   
   .spinning-logo {
-    animation: spin 3s linear infinite;
+    animation: spin 8s linear infinite;
     width: 4rem;
     height: 4rem;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
@@ -69,7 +69,7 @@
   
   /* When ringing, combine both animations */
   .chatbot-toggle-button.ringing .spinning-logo {
-    animation: spin 3s linear infinite, ring 3s ease-in-out;
+    animation: spin 8s linear infinite, ring 3s ease-in-out;
     animation-fill-mode: forwards;
   }
   

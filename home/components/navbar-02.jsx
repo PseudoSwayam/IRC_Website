@@ -41,9 +41,9 @@ const useRelume = () => {
 export function Navbar2() {
   const useActive = useRelume();
   return (
-    <section className="fixed top-4 left-4 right-4 z-[999] flex w-auto items-center bg-black/30 backdrop-blur-md border border-white/20 rounded-2xl lg:min-h-16 lg:px-[3%] shadow-2xl">
-      <div className="mx-auto size-full lg:grid lg:grid-cols-[0.375fr_1fr_0.375fr] lg:items-center lg:justify-between lg:gap-4">
-        <div className="flex min-h-14 items-center justify-between px-[4%] md:min-h-16 lg:min-h-full lg:px-0">
+    <section className="fixed top-4 left-4 right-4 z-[999] flex w-auto items-center bg-black/20 backdrop-blur-xl border border-white/10 rounded-2xl lg:min-h-16 lg:px-[3%] shadow-2xl">
+      <div className="mx-auto size-full lg:flex lg:items-center lg:justify-between lg:gap-4">
+        <div className="flex min-h-14 items-center justify-between px-[4%] md:min-h-16 lg:min-h-full lg:px-0 lg:flex-shrink-0">
           <a href="/">
             <img
               src="/irclogo.png"
@@ -110,7 +110,7 @@ export function Navbar2() {
           initial="close"
           exit="close"
           transition={{ duration: 0.4 }}
-          className="overflow-hidden px-[5%] text-center lg:flex lg:items-center lg:justify-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto]"
+          className="overflow-hidden px-[5%] text-center lg:flex lg:items-center lg:justify-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto] lg:flex-1"
         >
           <a
             href="/"
@@ -191,11 +191,9 @@ export function Navbar2() {
             </AnimatePresence>
           </div>
         </motion.div>
-        <div className="hidden justify-self-end lg:block">
-          <Button className="px-6 py-2" title="Join" size="sm">
-            Join
-          </Button>
-        </div>
+        <Button className="hidden lg:block px-6 py-2 bg-yellow-500 hover:bg-yellow-400 text-black font-semibold border-0 shadow-lg" title="Join" size="sm">
+          Join
+        </Button>
       </div>
     </section>
   );

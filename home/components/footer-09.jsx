@@ -35,11 +35,11 @@ export function Footer9() {
       <div className="container">
         <Card className="grid grid-cols-1 gap-x-[8vw] gap-y-12 p-8 md:gap-y-16 md:p-12 lg:grid-cols-[0.75fr_1fr] lg:gap-y-4">
           <div className="flex flex-col">
-            <a href="#" className="mb-5 md:mb-6">
+            <a href="/" className="mb-5 md:mb-6">
               <img
-                src="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"
-                alt="Logo image"
-                className="inline-block"
+                src="/irclogo.png"
+                alt="ITER Robotics Club Logo"
+                className="inline-block h-12 w-auto"
               />
             </a>
             <p className="mb-5 md:mb-6">
@@ -144,7 +144,7 @@ export function Footer9() {
                   </a>
                 </li>
                 <li className="text-small py-2">
-                  <a href="#" className="flex items-center gap-3">
+                  <a href="https://www.instagram.com/iterroboticsclub/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
                     <BiLogoInstagram className="size-6" />
                     <span>Instagram</span>
                   </a>
